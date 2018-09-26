@@ -742,6 +742,7 @@
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
+                                                    <sortDescriptor key="sortDescriptorPrototype" selector="caseInsensitiveCompare:" sortKey="personName"/>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <connections>
                                                         <binding destination="cld-yW-8fR" name="value" keyPath="arrangedObjects.personName" id="c6z-UB-3ox"/>
@@ -803,10 +804,12 @@
                                     <string key="keyEquivalent" base64-UTF8="YES">
 CA
 </string>
+                                    <connections>
+                                        <binding destination="cld-yW-8fR" name="enabled" keyPath="canRemove" id="hWy-6R-2dP"/>
+                                    </connections>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="remove:" target="cld-yW-8fR" id="SHj-0P-WnN"/>
-                                    <binding destination="cld-yW-8fR" name="enabled" keyPath="selection.canRemove" id="ekC-P8-8eL"/>
+                                    <action selector="remove:" target="cld-yW-8fR" id="bnS-ku-oYA"/>
                                 </connections>
                             </button>
                         </subviews>

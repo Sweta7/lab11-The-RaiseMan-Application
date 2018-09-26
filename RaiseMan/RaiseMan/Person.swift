@@ -9,6 +9,14 @@
 import Cocoa
 
 class Person: NSObject {
-    var personName:String = "New Person"
-    var expectedRaise:Float = 0.05
+    @objc dynamic var personName:String = "New Person"
+    @objc dynamic var expectedRaise:Float = 0.05
+    
+    override func setNilValueForKey(_ key: String) {
+        if key == "expectedRaise" {
+            expectedRaise = 0.0
+        }else{
+            super.setNilValueForKey(key)
+        }
+    }
 }
